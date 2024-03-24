@@ -7,6 +7,7 @@ function Navigation({ setSelectedCategory }) {
   const handleClick = (category) => {
     setSelectedCategory(category);
     setSelectedItem(category);
+    window.history.pushState(null, null, `/${category}`); // Change URL without reloading
   };
 
   return (
