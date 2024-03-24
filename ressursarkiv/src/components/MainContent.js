@@ -1,3 +1,4 @@
+// MainContent.js
 import React from 'react';
 import { resources } from '../resources';
 

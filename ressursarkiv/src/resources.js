@@ -1,3 +1,4 @@
+// resources.js
 export const resources = [
     {
       category: "HTML",
