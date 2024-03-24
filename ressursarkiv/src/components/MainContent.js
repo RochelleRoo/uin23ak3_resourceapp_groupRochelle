@@ -11,7 +11,7 @@ function MainContent({ selectedCategory }) {
   }
 
   return (
-    <div>
+    <main>
       <h1>{selectedResources.category}</h1>
       <p>{selectedResources.text}</p>
       <ul>
@@ -21,7 +21,7 @@ function MainContent({ selectedCategory }) {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 }
 
