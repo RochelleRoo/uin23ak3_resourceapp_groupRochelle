@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { resources } from '../resources';
 
 function Navigation({ setSelectedCategory }) {
+  const [selectedItem, setSelectedItem] = useState(resources[0].category);
+
+  const handleClick = (category) => {
+    setSelectedCategory(category);
+    setSelectedItem(category);
+  };
+
   return (
     <nav>
       <ul>
         {resources.map((item, index) => (
-          <li key={index} onClick={() => setSelectedCategory(item.category)}>
+          <li
+            key={index}
+            onClick={() => handleClick(item.category)}
+            className={selectedItem === item.category ? 'active' : ''}
+          >
             {item.category}
           </li>
         ))}

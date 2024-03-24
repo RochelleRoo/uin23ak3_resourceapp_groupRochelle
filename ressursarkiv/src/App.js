@@ -1,3 +1,4 @@
+import './css/sass/main.scss';
 import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import MainContent from './components/MainContent';
