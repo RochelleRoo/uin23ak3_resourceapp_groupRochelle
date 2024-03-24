@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Navigation from './components/Navigation';
+import MainContent from './components/MainContent';
+import './App.css';
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState('HTML');
+
   return (
     <div>
-      <h1>Hello, React!</h1>
+      <Navigation setSelectedCategory={setSelectedCategory} />
+      <MainContent selectedCategory={selectedCategory} />
     </div>
   );
 }
